@@ -1,21 +1,23 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>{% block title %}Мой магазин{% endblock %}</title>
-    <link href="{% static "css/base.css" %}" rel="stylesheet">
+        <meta charset="utf-8"/>
+        <title>{% block title %}Мой магазин{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+    <nav class="navbar navbar-light" style="background-color: lightskyblue">
 <div id="header">
     <a href="/" class="logo">Мой магазин</a>
 </div>
+</nav>  
 <div id="subheader">
     <div class="cart">
         Ваша корзина пуста.
     </div>
 </div>
-<div id="content">
+<div class="container py-5", id="content">
     {% block content %}
     {% endblock %}
 </div>
